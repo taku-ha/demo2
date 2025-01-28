@@ -5,10 +5,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo2.domain.User;
+import com.example.demo2.domain.User2;
 
 import jakarta.servlet.ServletContext;
 
@@ -33,12 +33,12 @@ public class Ex16Controller {
         return "ex-16";
     }
 
-    @RequestMapping("")
+    @RequestMapping("/post")
     public String post(String name, String comment) {
 
         String chat = (String)application.getAttribute("chatlist");
-        User user = new User();
-        chatlist.add(user);
+        User2 user = new User2();
+        //chatlist.add(user);
 
         return "ex-16";
     }

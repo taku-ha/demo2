@@ -1,32 +1,45 @@
 package com.example.demo2.domain;
 
+import java.util.List;
+
 public class User {
 
+    private Integer id;
     private String name;
-    private String comment;
-
-
-    public User() {
-    }
-    public User(String name, String comment) {
-        this.name = name;
-        this.comment = comment;
-    }
+    private String email;
+    private String password;
+    private List<String> hobbyList;
 
     
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
     }
-    public String getComment() {
-        return comment;
+    public String getEmail() {
+        return email;
     }
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public List<String> getHobbyList() {
+        return hobbyList;
+    }
+    public void setHobbyList(List<String> hobbyList) {
+        this.hobbyList = hobbyList;
     }
 
-
-    
 }

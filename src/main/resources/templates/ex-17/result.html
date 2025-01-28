@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    名前：<span th:text="${ex17Questionnaire.name}">dummy</span><br>
+
+    メール：<span th:text="${ex17Questionnaire.email}">dummy</span><br>
+
+    性別：<span th:text="${ex17Questionnaire.gender}">dummy</span><br>
+
+    趣味：<span th:each="hobby:${ex17Questionnaire.hobbyList}">
+        <span th:text="${hobby}">dummy</span><br>
+        </span><br>
+
+    好きな言語：<span th:each="language:${ex17Questionnaire.languageList}">
+            <span th:text="${language}">dummy</span><br>
+            </span><br>
+
+    その他：<span th:text="${ex17Questionnaire.comment}">dummy</span><br>
+</body>
+</html>
